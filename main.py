@@ -26,7 +26,7 @@ class Bases:
     def new_base(self,target,base):
         self.check_base(base)
         final_number = ""
-        new_lenght = int(log(target,base)) # Hago uso del logaritmo para saber la cantidad de digitos que tiene
+        new_lenght = int(log(target,base))
         for i in range(new_lenght,-1,-1):
             final_number += self.symbol_table[ target//(base**(i)) ]
             target = target%( base**(i) )
